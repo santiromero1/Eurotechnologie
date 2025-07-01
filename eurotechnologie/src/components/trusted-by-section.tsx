@@ -31,7 +31,7 @@ export default function TrustedBySection() {
     const carousel = carouselRef.current
     if (!carousel) return
     let animationFrame: number
-    let scrollAmount = 0
+    // let scrollAmount = 0
     const speed = 1 // píxeles por frame
 
     const scroll = () => {
