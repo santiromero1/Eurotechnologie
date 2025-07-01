@@ -22,7 +22,7 @@ export default function AboutSection() {
           <div className="relative">
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/fabrica.jpeg"
+                src="/fabrica.jpg"
                 alt="Eurotechnologie Group Office"
                 fill
                 className="object-cover"

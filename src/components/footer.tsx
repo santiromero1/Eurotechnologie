@@ -17,9 +17,11 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Locations</h4>
             <div className="space-y-2 text-gray-400">
-              <p>Miami, USA (HQ)</p>
-              <p>Hong Kong</p>
-              <p>Buenos Aires, Argentina</p>
+              <p>Eurotechnologie Co. Limited</p>
+              <p>Room 409, Beverly Commercial Center</p>
+              <p>Chatham South Road 87–105</p>
+              <p>Tsim Sha Tsui, Kowloon, Hong Kong</p>
+              <p>Eurotechnologie Group HQ</p>
             </div>
           </div>
 
@@ -27,7 +29,7 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-gray-400">
               <p>info@eurotechnologie.com</p>
-              <p>+1 (305) 555-0123</p>
+              <p>+1 786 782-3579</p>
             </div>
           </div>
         </div>
