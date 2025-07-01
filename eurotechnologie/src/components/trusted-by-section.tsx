@@ -2,6 +2,8 @@
 
 import { useLanguage } from "@/contexts/language-context"
 import { useEffect, useRef } from "react"
+import Image from 'next/image'
+
 
 export default function TrustedBySection() {
   const { t } = useLanguage()
@@ -64,7 +66,7 @@ export default function TrustedBySection() {
               style={{ minWidth: 180 }}
             >
               <div className="bg-gray-100 rounded-lg p-6 h-24 flex items-center justify-center">
-                <img
+                <Image
                   src={logo.src}
                   alt={logo.alt}
                   className="h-12 w-auto object-contain"

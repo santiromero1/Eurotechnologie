@@ -4,6 +4,8 @@ import { useState, useEffect } from "react"
 import { useLanguage } from "@/contexts/language-context"
 import LanguageSwitcher from "./language-switcher"
 import { Menu, X } from "lucide-react"
+import Image from 'next/image'
+
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -46,7 +48,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img src="/logo.png" alt="Eurotechnologie Group Logo" className="h-10 w-auto" />
+            <Image src="/logo.png" alt="Eurotechnologie Group Logo" className="h-10 w-auto" />
           </div>
 
           {/* Desktop Navigation */}

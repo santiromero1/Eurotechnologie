@@ -1,6 +1,7 @@
 "use client"
 
 import { useLanguage } from "@/contexts/language-context"
+import Image from 'next/image'
 
 export default function BrandsSection() {
   const { t } = useLanguage()
@@ -23,7 +24,7 @@ export default function BrandsSection() {
           {brands.map((brand, index) => (
             <div key={index} className="text-center group">
               <div className="bg-gray-100 rounded-xl p-2 mb-4 group-hover:bg-gray-200 transition-colors flex items-center justify-center h-48">
-                <img
+              <Image
                   src={brand.img}
                   alt={brand.name}
                   className="h-full w-full object-contain"
