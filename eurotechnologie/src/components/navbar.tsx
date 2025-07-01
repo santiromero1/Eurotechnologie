@@ -48,7 +48,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Image src="/logo.png" alt="Eurotechnologie Group Logo" className="h-10 w-auto" />
+            <Image src="/logo.png" alt="Eurotechnologie Group Logo" className="h-10 w-auto" width={200} height={100}/>
           </div>
 
           {/* Desktop Navigation */}

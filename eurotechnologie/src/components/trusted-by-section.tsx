@@ -71,6 +71,8 @@ export default function TrustedBySection() {
                   alt={logo.alt}
                   className="h-12 w-auto object-contain"
                   loading="lazy"
+                  width={200}
+                  height={100}
                 />
               </div>
             </div>
