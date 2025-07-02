@@ -9,7 +9,8 @@ export default function LanguageSwitcher() {
   return (
     <div className="flex items-center space-x-2">
       <Globe className="h-4 w-4 text-gray-600" />
-      <div className="flex bg-gray-100 rounded-lg p-1">
+      {/* Desktop: botones */}
+      <div className="hidden sm:flex bg-gray-100 rounded-lg p-1">
         <button
           onClick={() => setLanguage("es")}
           className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
@@ -50,6 +51,20 @@ export default function LanguageSwitcher() {
         >
           FR
         </button>
+      </div>
+      {/* Mobile: select */}
+      <div className="sm:hidden bg-gray-100 rounded-lg p-1">
+        <select
+          value={language}
+          onChange={e => setLanguage(e.target.value as any)}
+          className="px-3 py-1 text-sm font-medium rounded-md bg-gray-100 text-gray-700 focus:outline-none"
+        >
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="pt">PT</option>
+          <option value="it">IT</option>
+          <option value="fr">FR</option>
+        </select>
       </div>
     </div>
   )
