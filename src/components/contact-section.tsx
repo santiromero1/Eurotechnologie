@@ -5,6 +5,7 @@ import type React from "react"
 import { useState } from "react"
 import { useLanguage } from "@/contexts/language-context"
 import { Send } from "lucide-react"
+import emailjs from "@emailjs/browser"
 
 export default function ContactSection() {
   const { t } = useLanguage()
@@ -14,11 +15,43 @@ export default function ContactSection() {
     email: "",
     message: "",
   })
+  const [isLoading, setIsLoading] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
+    setIsLoading(true)
+    setSubmitStatus("idle")
+
+    try {
+      // Configuración de EmailJS
+      const serviceId = "service_rer9n2i" // Reemplaza con tu Service ID real
+      const templateId = "template_m88yydp" // Reemplaza con tu Template ID real
+      const publicKey = "rYVX1OIhG2wrpYJfl" // Reemplaza con tu Public Key real
+
+      const templateParams = {
+        to_email: "info@eurotechnologie.co",
+        from_name: formData.name,
+        from_company: formData.company,
+        from_email: formData.email,
+        message: formData.message,
+      }
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey)
+      
+      setSubmitStatus("success")
+      setFormData({
+        name: "",
+        company: "",
+        email: "",
+        message: "",
+      })
+    } catch (error) {
+      console.error("Error sending email:", error)
+      setSubmitStatus("error")
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -98,11 +131,33 @@ export default function ContactSection() {
             <div className="text-center">
               <button
                 type="submit"
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+                disabled={isLoading}
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {t("contact.cta")}
-                <Send className="ml-2 h-5 w-5" />
+                {isLoading ? (
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                    Enviando...
+                  </>
+                ) : (
+                  <>
+                    {t("contact.cta")}
+                    <Send className="ml-2 h-5 w-5" />
+                  </>
+                )}
               </button>
+              
+              {submitStatus === "success" && (
+                <div className="mt-4 p-4 bg-green-600 text-white rounded-lg">
+                  ¡Mensaje enviado exitosamente! Te contactaremos pronto.
+                </div>
+              )}
+              
+              {submitStatus === "error" && (
+                <div className="mt-4 p-4 bg-red-600 text-white rounded-lg">
+                  Error al enviar el mensaje. Por favor, intenta nuevamente.
+                </div>
+              )}
             </div>
           </form>
         </div>
