@@ -11,6 +11,7 @@ export default function BrandsSection() {
     { name: "Eurocase", key: "brands.eurocase", img: "/our-brand/eurocase.png" },
     { name: "Datavision", key: "brands.datavision", img: "/our-brand/datavision.png" },
     { name: "Maxima", key: "brands.maxima", img: "/our-brand/maxima.png" },
+    { name: "Tabi", key: "brands.tabi", img: "/our-brand/tabi.png" },
   ]
 
   return (
@@ -20,17 +21,17 @@ export default function BrandsSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t("brands.title")}</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {brands.map((brand, index) => (
             <div key={index} className="text-center group">
-              <div className="bg-gray-100 rounded-xl p-2 mb-4 group-hover:bg-gray-200 transition-colors flex items-center justify-center h-48">
+              <div className="bg-gray-100 rounded-xl p-2 mb-4 group-hover:bg-gray-200 transition-colors flex items-center justify-center h-36">
               <Image
                   src={brand.img}
                   alt={brand.name}
                   className="h-full w-full object-contain"
                   loading="lazy"
-                  width={200}
-                  height={100}
+                  width={140}
+                  height={80}
                 />
               </div>
               <h3 className="font-semibold text-gray-900 mb-2">{brand.name}</h3>

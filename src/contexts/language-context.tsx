@@ -44,6 +44,7 @@ const translations = {
     "brands.eurocase": "Eurocase: Professional protective cases and storage",
     "brands.datavision": "Datavision: Advanced data management solutions",
     "brands.maxima": "Maxima: High-performance consumer electronics",
+    "brands.tabi": "Tabi: Innovative early childhood education for kindergartens in Latin America.",
 
     // Why Choose Us Section
     "why.title": "The Advantage of a Strategic Partner",
@@ -100,6 +101,7 @@ const translations = {
     "brands.eurocase": "Eurocase: Estuches protectores profesionales y almacenamiento",
     "brands.datavision": "Datavision: Soluciones avanzadas de gestión de datos",
     "brands.maxima": "Maxima: Electrónicos de consumo de alto rendimiento",
+    "brands.tabi": "Tabi: Educación infantil innovadora para jardines de infantes en Latinoamérica.",
 
     // Why Choose Us Section
     "why.title": "La Ventaja de un Socio Estratégico",
@@ -156,6 +158,7 @@ const translations = {
     "brands.eurocase": "Eurocase: Estojos protetores profissionais e armazenamento",
     "brands.datavision": "Datavision: Soluções avançadas de gestão de dados",
     "brands.maxima": "Maxima: Eletrônicos de consumo de alto desempenho",
+    "brands.tabi": "Tabi: Educação infantil inovadora para jardins de infância na América Latina.",
 
     // Sección Why Choose Us
     "why.title": "A Vantagem de um Parceiro Estratégico",
@@ -212,6 +215,7 @@ const translations = {
     "brands.eurocase": "Eurocase: Custodie protettive professionali e archiviazione",
     "brands.datavision": "Datavision: Soluzioni avanzate di gestione dei dati",
     "brands.maxima": "Maxima: Elettronica di consumo ad alte prestazioni",
+    "brands.tabi": "Tabi: Educazione infantile innovativa per scuole materne in America Latina.",
 
     // Sezione Why Choose Us
     "why.title": "Il Vantaggio di un Partner Strategico",
@@ -268,6 +272,7 @@ const translations = {
     "brands.eurocase": "Eurocase : Étuis de protection professionnels et stockage",
     "brands.datavision": "Datavision : Solutions avancées de gestion des données",
     "brands.maxima": "Maxima : Électronique grand public haute performance",
+    "brands.tabi": "Tabi : Éducation préscolaire innovante pour les jardins d'enfants en Amérique latine.",
 
     // Section Why Choose Us
     "why.title": "L'Avantage d'un Partenaire Stratégique",
