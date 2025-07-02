@@ -26,6 +26,30 @@ export default function LanguageSwitcher() {
         >
           EN
         </button>
+        <button
+          onClick={() => setLanguage("pt")}
+          className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
+            language === "pt" ? "bg-white text-blue-600 shadow-sm" : "text-gray-600 hover:text-gray-900"
+          }`}
+        >
+          PT
+        </button>
+        <button
+          onClick={() => setLanguage("it")}
+          className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
+            language === "it" ? "bg-white text-blue-600 shadow-sm" : "text-gray-600 hover:text-gray-900"
+          }`}
+        >
+          IT
+        </button>
+        <button
+          onClick={() => setLanguage("fr")}
+          className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
+            language === "fr" ? "bg-white text-blue-600 shadow-sm" : "text-gray-600 hover:text-gray-900"
+          }`}
+        >
+          FR
+        </button>
       </div>
     </div>
   )
