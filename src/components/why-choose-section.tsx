@@ -22,7 +22,7 @@ export default function WhyChooseSection() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {advantages.map((advantage, index) => (
-            <div key={index} className="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-md">
+            <div key={index} className="flex items-center space-x-4 bg-white p-6 rounded-lg shadow-md">
               <div className="bg-blue-100 p-3 rounded-lg flex-shrink-0">
                 <advantage.icon className="h-6 w-6 text-blue-600" />
               </div>
